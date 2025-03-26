@@ -8,7 +8,7 @@ import { Pagination } from "@/components/Pagination";
 import projects from "@/data/projects.json";
 import { Project } from "@/types";
 import { useRouter, useSearchParams, usePathname } from "next/navigation";
-import { useState, useEffect, useMemo } from "react";
+import { useState, useEffect, useMemo, Suspense } from "react";
 import {
   Select,
   SelectContent,
@@ -17,7 +17,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 
-export default function Home() {
+function HomeContent() {
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
@@ -177,5 +177,18 @@ export default function Home() {
         </footer>
       </div>
     </div>
+  );
+}
+
+// Add a loading fallback component
+function LoadingFallback() {
+  return <div className="p-4">Loading...</div>;
+}
+
+export default function Home() {
+  return (
+    <Suspense fallback={<LoadingFallback />}>
+      <HomeContent />
+    </Suspense>
   );
 }

@@ -15,14 +15,13 @@ import { notFound } from "next/navigation";
 import { Metadata } from "next";
 
 interface ProjectPageProps {
-  params: {
-    id: string;
-  };
+  params: Promise<{ id: string }>;
 }
 
-export async function generateMetadata({
-  params,
-}: ProjectPageProps): Promise<Metadata> {
+export async function generateMetadata(
+  props: ProjectPageProps
+): Promise<Metadata> {
+  const params = await props.params;
   const project = projects.find((p) => p.id === parseInt(params.id));
 
   if (!project) {
@@ -37,7 +36,10 @@ export async function generateMetadata({
   };
 }
 
-export default function ProjectPage({ params }: ProjectPageProps) {
+export default async function ProjectPage(props: {
+  params: Promise<{ id: string }>;
+}) {
+  const params = await props.params;
   const project = projects.find((p) => p.id === parseInt(params.id)) as Project;
 
   if (!project) {
