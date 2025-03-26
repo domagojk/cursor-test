@@ -1,0 +1,55 @@
+[
+  {
+    "id": 1,
+    "title": "AI Code Assistant",
+    "description": "An AI-powered code assistant that helps developers write better code faster. Integrates with popular IDEs and provides real-time suggestions.",
+    "image": "/images/ai-code-assistant.jpg",
+    "links": [
+      {
+        "title": "GitHub Repository",
+        "url": "https://github.com/company/ai-code-assistant"
+      },
+      {
+        "title": "Demo Site",
+        "url": "https://ai-code-assistant-demo.company.com"
+      }
+    ],
+    "team": ["John Doe", "Jane Smith", "Alex Johnson"],
+    "hackathon": "Summer Hackathon 2023",
+    "date": "July 2023"
+  },
+  {
+    "id": 2,
+    "title": "Employee Wellness Dashboard",
+    "description": "A dashboard that tracks and promotes employee wellness initiatives. Features include activity tracking, wellness challenges, and team competitions.",
+    "image": "/images/wellness-dashboard.jpg",
+    "links": [
+      {
+        "title": "Internal Wiki",
+        "url": "https://wiki.company.com/wellness-dashboard"
+      }
+    ],
+    "team": ["Michael Brown", "Sarah Miller", "David Wilson"],
+    "hackathon": "Winter Hackathon 2023",
+    "date": "December 2023"
+  },
+  {
+    "id": 3,
+    "title": "Customer Feedback Portal",
+    "description": "A centralized portal for collecting and analyzing customer feedback from various channels. Includes sentiment analysis and trend visualization.",
+    "image": "/images/feedback-portal.jpg",
+    "links": [
+      {
+        "title": "Product Page",
+        "url": "https://company.com/feedback-portal"
+      },
+      {
+        "title": "API Documentation",
+        "url": "https://docs.company.com/feedback-api"
+      }
+    ],
+    "team": ["Emma Davis", "Ryan Thompson", "Olivia Martinez"],
+    "hackathon": "Spring Hackathon 2024",
+    "date": "March 2024"
+  }
+]
