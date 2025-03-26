@@ -1,7 +1,9 @@
 "use client";
 
 import { ProjectGrid } from "@/components/ProjectGrid";
+import { ProjectList } from "@/components/ProjectList";
 import { ProjectFilters } from "@/components/ProjectFilters";
+import { ViewToggle, ViewMode } from "@/components/ViewToggle";
 import projects from "@/data/projects.json";
 import { Project } from "@/types";
 import { useRouter, useSearchParams } from "next/navigation";
@@ -14,6 +16,15 @@ export default function Home() {
   const [filteredProjects, setFilteredProjects] = useState<Project[]>(
     projects as Project[]
   );
+  const [viewMode, setViewMode] = useState<ViewMode>("grid");
+
+  useEffect(() => {
+    // Check if a view preference is stored in localStorage
+    const savedView = localStorage.getItem("projectViewMode");
+    if (savedView === "grid" || savedView === "list") {
+      setViewMode(savedView as ViewMode);
+    }
+  }, []);
 
   useEffect(() => {
     if (projectId) {
@@ -23,6 +34,12 @@ export default function Home() {
       }
     }
   }, [projectId, router]);
+
+  const handleViewChange = (newView: ViewMode) => {
+    setViewMode(newView);
+    // Save view preference to localStorage
+    localStorage.setItem("projectViewMode", newView);
+  };
 
   return (
     <div className="min-h-screen bg-background">
@@ -38,11 +55,28 @@ export default function Home() {
         </header>
 
         <main>
-          <ProjectFilters
-            projects={projects as Project[]}
-            onFiltersChange={setFilteredProjects}
-          />
-          <ProjectGrid projects={filteredProjects} />
+          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-8">
+            <div className="flex-grow">
+              <ProjectFilters
+                projects={projects as Project[]}
+                onFiltersChange={setFilteredProjects}
+              />
+            </div>
+            <div className="self-end sm:self-auto mt-4 sm:mt-0">
+              <ViewToggle
+                currentView={viewMode}
+                onViewChange={handleViewChange}
+              />
+            </div>
+          </div>
+
+          <div className="mt-6">
+            {viewMode === "grid" ? (
+              <ProjectGrid projects={filteredProjects} />
+            ) : (
+              <ProjectList projects={filteredProjects} />
+            )}
+          </div>
         </main>
 
         <footer className="mt-20 pt-8 border-t text-center text-sm text-muted-foreground">
