@@ -85,5 +85,167 @@
     "authors": ["Jennifer Kim", "Rajiv Patel", "Maria Rodriguez"],
     "cycle": "2022.4",
     "suggestedBy": "Robert Johnson"
+  },
+  {
+    "id": 6,
+    "title": "Knowledge Base Revamp",
+    "description": "A complete redesign of the internal knowledge base with improved search, categorization, and user experience.",
+    "image": "https://picsum.photos/seed/knowledge/800/400",
+    "links": [
+      {
+        "title": "Project Documentation",
+        "url": "https://docs.company.com/kb-revamp"
+      }
+    ],
+    "authors": ["Daniel Park", "Sophie Williams", "Nathan Chen"],
+    "cycle": "2023.2",
+    "suggestedBy": "Amanda Garcia"
+  },
+  {
+    "id": 7,
+    "title": "Automated Testing Framework",
+    "description": "A comprehensive testing framework that automates regression testing across all company products with detailed reporting.",
+    "image": "https://picsum.photos/seed/testing/800/400",
+    "links": [
+      {
+        "title": "GitHub Repository",
+        "url": "https://github.com/company/testing-framework"
+      },
+      {
+        "title": "Documentation",
+        "url": "https://docs.company.com/testing-framework"
+      }
+    ],
+    "authors": ["Victor Lopez", "Diana Wright", "Thomas Mueller"],
+    "cycle": "2023.1",
+    "suggestedBy": "Jasmine Chang"
+  },
+  {
+    "id": 8,
+    "title": "Customer Onboarding Portal",
+    "description": "A streamlined portal for new customer onboarding that guides users through necessary steps with progress tracking.",
+    "image": "https://picsum.photos/seed/onboarding/800/400",
+    "links": [
+      {
+        "title": "Live Demo",
+        "url": "https://demo.company.com/onboarding"
+      }
+    ],
+    "authors": ["Rebecca Foster", "Kyle Jenkins", "Leila Patel"],
+    "cycle": "2024.1",
+    "suggestedBy": "Henry Scott"
+  },
+  {
+    "id": 9,
+    "title": "Team Collaboration Hub",
+    "description": "An integrated hub for team collaboration with document sharing, real-time editing, and communication tools.",
+    "image": "https://picsum.photos/seed/collab/800/400",
+    "links": [
+      {
+        "title": "Internal Site",
+        "url": "https://collab.company.com"
+      }
+    ],
+    "authors": ["Grace Kim", "Noah Carter", "Zoe Anderson"],
+    "cycle": "2023.3",
+    "suggestedBy": "Lucas Martinez"
+  },
+  {
+    "id": 10,
+    "title": "Security Dashboard",
+    "description": "A comprehensive security monitoring dashboard that provides real-time alerts and vulnerability assessments.",
+    "image": "https://picsum.photos/seed/security/800/400",
+    "links": [
+      {
+        "title": "Security Wiki",
+        "url": "https://wiki.company.com/security-dashboard"
+      }
+    ],
+    "authors": ["Ian Wilson", "Michelle Lee", "Omar Hassan"],
+    "cycle": "2023.4",
+    "suggestedBy": "Sophia Rodriguez"
+  },
+  {
+    "id": 11,
+    "title": "DevOps Pipeline Optimizer",
+    "description": "A tool that analyzes and optimizes CI/CD pipelines to reduce build times and improve deployment reliability.",
+    "image": "https://picsum.photos/seed/devops/800/400",
+    "links": [
+      {
+        "title": "GitHub Repository",
+        "url": "https://github.com/company/pipeline-optimizer"
+      }
+    ],
+    "authors": ["Felix Chen", "Hannah Brown", "Jordan Taylor"],
+    "cycle": "2024.1",
+    "suggestedBy": "Patricia Wong"
+  },
+  {
+    "id": 12,
+    "title": "Data Visualization Platform",
+    "description": "An interactive platform for creating and sharing data visualizations with customizable dashboards.",
+    "image": "https://picsum.photos/seed/dataviz/800/400",
+    "links": [
+      {
+        "title": "Demo Dashboard",
+        "url": "https://dataviz.company.com/demo"
+      },
+      {
+        "title": "User Guide",
+        "url": "https://docs.company.com/dataviz-guide"
+      }
+    ],
+    "authors": ["Camila Rodriguez", "Benjamin Liu", "Rachel Green"],
+    "cycle": "2023.2",
+    "suggestedBy": "Ethan Murphy"
+  },
+  {
+    "id": 13,
+    "title": "Internal Chatbot",
+    "description": "An AI-powered chatbot for internal use that helps employees find information, schedule meetings, and access company resources.",
+    "image": "https://picsum.photos/seed/chatbot/800/400",
+    "links": [
+      {
+        "title": "Bot Portal",
+        "url": "https://chatbot.company.com"
+      }
+    ],
+    "authors": ["Liam Johnson", "Natalie Park", "Owen Garcia"],
+    "cycle": "2023.3",
+    "suggestedBy": "Vanessa Lee"
+  },
+  {
+    "id": 14,
+    "title": "Remote Onboarding Experience",
+    "description": "A comprehensive remote onboarding experience for new employees with interactive training modules and virtual team-building activities.",
+    "image": "https://picsum.photos/seed/remoteonboard/800/400",
+    "links": [
+      {
+        "title": "Onboarding Portal",
+        "url": "https://onboarding.company.com"
+      }
+    ],
+    "authors": ["Aria Davis", "Mason Wright", "Chloe Zhang"],
+    "cycle": "2023.4",
+    "suggestedBy": "William Chen"
+  },
+  {
+    "id": 15,
+    "title": "Cloud Cost Analyzer",
+    "description": "A tool that analyzes cloud infrastructure costs and provides recommendations for optimization and savings.",
+    "image": "https://picsum.photos/seed/cloudcost/800/400",
+    "links": [
+      {
+        "title": "Cost Dashboard",
+        "url": "https://cloud-cost.company.com"
+      },
+      {
+        "title": "Documentation",
+        "url": "https://docs.company.com/cloud-cost"
+      }
+    ],
+    "authors": ["Derek Phillips", "Eliza Ward", "Faisal Ali"],
+    "cycle": "2024.1",
+    "suggestedBy": "Tina Johnson"
   }
 ]
