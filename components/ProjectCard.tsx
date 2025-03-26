@@ -11,7 +11,6 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 
 interface ProjectCardProps {
   project: Project;
@@ -32,26 +31,22 @@ export function ProjectCard({ project }: ProjectCardProps) {
       <CardHeader>
         <CardTitle className="text-xl">{project.title}</CardTitle>
         <CardDescription className="text-sm text-muted-foreground">
-          {project.hackathon} • {project.date}
+          Cycle: {project.cycle}
+          {project.suggestedBy && (
+            <div>Suggested by: {project.suggestedBy}</div>
+          )}
         </CardDescription>
       </CardHeader>
       <CardContent>
         <p className="text-sm text-muted-foreground">{project.description}</p>
 
         <div className="mt-4">
-          <h4 className="text-sm font-medium mb-2">Team:</h4>
-          <div className="flex flex-wrap gap-2">
-            {project.team.map((member, index) => (
-              <Avatar key={index} className="h-8 w-8">
-                <AvatarFallback className="bg-primary/10 text-primary text-xs">
-                  {member
-                    .split(" ")
-                    .map((name) => name[0])
-                    .join("")}
-                </AvatarFallback>
-              </Avatar>
+          <h4 className="text-sm font-medium mb-2">Authors:</h4>
+          <ul className="text-sm text-muted-foreground">
+            {project.authors.map((author, index) => (
+              <li key={index}>{author}</li>
             ))}
-          </div>
+          </ul>
         </div>
       </CardContent>
       <CardFooter className="flex flex-col items-start gap-2">

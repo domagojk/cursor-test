@@ -9,7 +9,7 @@ export interface Project {
   description: string;
   image: string;
   links: ProjectLink[];
-  team: string[];
-  hackathon: string;
-  date: string;
+  authors: string[];
+  cycle: string;
+  suggestedBy?: string;
 }

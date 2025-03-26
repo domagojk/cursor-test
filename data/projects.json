@@ -14,9 +14,9 @@
         "url": "https://ai-code-assistant-demo.company.com"
       }
     ],
-    "team": ["John Doe", "Jane Smith", "Alex Johnson"],
-    "hackathon": "Summer Hackathon 2023",
-    "date": "July 2023"
+    "authors": ["John Doe", "Jane Smith", "Alex Johnson"],
+    "cycle": "2023.3",
+    "suggestedBy": "Mark Wilson"
   },
   {
     "id": 2,
@@ -29,9 +29,9 @@
         "url": "https://wiki.company.com/wellness-dashboard"
       }
     ],
-    "team": ["Michael Brown", "Sarah Miller", "David Wilson"],
-    "hackathon": "Winter Hackathon 2023",
-    "date": "December 2023"
+    "authors": ["Michael Brown", "Sarah Miller", "David Wilson"],
+    "cycle": "2023.4",
+    "suggestedBy": "Lisa Chen"
   },
   {
     "id": 3,
@@ -48,9 +48,9 @@
         "url": "https://docs.company.com/feedback-api"
       }
     ],
-    "team": ["Emma Davis", "Ryan Thompson", "Olivia Martinez"],
-    "hackathon": "Spring Hackathon 2024",
-    "date": "March 2024"
+    "authors": ["Emma Davis", "Ryan Thompson", "Olivia Martinez"],
+    "cycle": "2024.1",
+    "suggestedBy": "James Parker"
   },
   {
     "id": 4,
@@ -67,9 +67,9 @@
         "url": "https://play.google.com/store/apps/meeting-assistant"
       }
     ],
-    "team": ["Chris Lee", "Taylor Roberts", "Sam Garcia"],
-    "hackathon": "Fall Hackathon 2023",
-    "date": "October 2023"
+    "authors": ["Chris Lee", "Taylor Roberts", "Sam Garcia"],
+    "cycle": "2023.4",
+    "suggestedBy": "Priya Sharma"
   },
   {
     "id": 5,
@@ -82,8 +82,8 @@
         "url": "https://docs.company.com/supply-chain-optimizer"
       }
     ],
-    "team": ["Jennifer Kim", "Rajiv Patel", "Maria Rodriguez"],
-    "hackathon": "Winter Hackathon 2022",
-    "date": "December 2022"
+    "authors": ["Jennifer Kim", "Rajiv Patel", "Maria Rodriguez"],
+    "cycle": "2022.4",
+    "suggestedBy": "Robert Johnson"
   }
 ]
