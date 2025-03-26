@@ -79,73 +79,71 @@ export function ProjectFilters({
   ]);
 
   return (
-    <div className="flex-grow">
-      <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
-        <div className="space-y-2">
-          <Label htmlFor="search">Search</Label>
-          <Input
-            id="search"
-            placeholder="Search projects..."
-            value={searchTerm}
-            onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-              setSearchTerm(e.target.value)
-            }
-          />
-        </div>
+    <div className="space-y-4">
+      <div className="space-y-2">
+        <Label htmlFor="search">Search</Label>
+        <Input
+          id="search"
+          placeholder="Search projects..."
+          value={searchTerm}
+          onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+            setSearchTerm(e.target.value)
+          }
+        />
+      </div>
 
-        <div className="space-y-2">
-          <Label htmlFor="author">Author</Label>
-          <Select value={selectedAuthor} onValueChange={setSelectedAuthor}>
-            <SelectTrigger id="author">
-              <SelectValue placeholder="All authors" />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectItem value="all">All authors</SelectItem>
-              {uniqueAuthors.map((author) => (
-                <SelectItem key={author} value={author}>
-                  {author}
-                </SelectItem>
-              ))}
-            </SelectContent>
-          </Select>
-        </div>
+      <div className="space-y-2">
+        <Label htmlFor="author">Author</Label>
+        <Select value={selectedAuthor} onValueChange={setSelectedAuthor}>
+          <SelectTrigger id="author">
+            <SelectValue placeholder="All authors" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="all">All authors</SelectItem>
+            {uniqueAuthors.map((author) => (
+              <SelectItem key={author} value={author}>
+                {author}
+              </SelectItem>
+            ))}
+          </SelectContent>
+        </Select>
+      </div>
 
-        <div className="space-y-2">
-          <Label htmlFor="cycle">Cycle</Label>
-          <Select value={selectedCycle} onValueChange={setSelectedCycle}>
-            <SelectTrigger id="cycle">
-              <SelectValue placeholder="All cycles" />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectItem value="all">All cycles</SelectItem>
-              {uniqueCycles.map((cycle) => (
-                <SelectItem key={cycle} value={cycle}>
-                  {cycle}
-                </SelectItem>
-              ))}
-            </SelectContent>
-          </Select>
-        </div>
+      <div className="space-y-2">
+        <Label htmlFor="cycle">Cycle</Label>
+        <Select value={selectedCycle} onValueChange={setSelectedCycle}>
+          <SelectTrigger id="cycle">
+            <SelectValue placeholder="All cycles" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="all">All cycles</SelectItem>
+            {uniqueCycles.map((cycle) => (
+              <SelectItem key={cycle} value={cycle}>
+                {cycle}
+              </SelectItem>
+            ))}
+          </SelectContent>
+        </Select>
+      </div>
 
-        <div className="space-y-2">
-          <Label htmlFor="suggestedBy">Suggested By</Label>
-          <Select
-            value={selectedSuggestedBy}
-            onValueChange={setSelectedSuggestedBy}
-          >
-            <SelectTrigger id="suggestedBy">
-              <SelectValue placeholder="All suggesters" />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectItem value="all">All suggesters</SelectItem>
-              {uniqueSuggestedBy.map((suggester) => (
-                <SelectItem key={suggester} value={suggester}>
-                  {suggester}
-                </SelectItem>
-              ))}
-            </SelectContent>
-          </Select>
-        </div>
+      <div className="space-y-2">
+        <Label htmlFor="suggestedBy">Suggested By</Label>
+        <Select
+          value={selectedSuggestedBy}
+          onValueChange={setSelectedSuggestedBy}
+        >
+          <SelectTrigger id="suggestedBy">
+            <SelectValue placeholder="All suggesters" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="all">All suggesters</SelectItem>
+            {uniqueSuggestedBy.map((suggester) => (
+              <SelectItem key={suggester} value={suggester}>
+                {suggester}
+              </SelectItem>
+            ))}
+          </SelectContent>
+        </Select>
       </div>
     </div>
   );

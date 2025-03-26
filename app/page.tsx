@@ -2,8 +2,8 @@
 
 import { ProjectGrid } from "@/components/ProjectGrid";
 import { ProjectList } from "@/components/ProjectList";
-import { ProjectFilters } from "@/components/ProjectFilters";
 import { ViewToggle, ViewMode } from "@/components/ViewToggle";
+import { Sidebar } from "@/components/Sidebar";
 import projects from "@/data/projects.json";
 import { Project } from "@/types";
 import { useRouter, useSearchParams } from "next/navigation";
@@ -55,27 +55,29 @@ export default function Home() {
         </header>
 
         <main>
-          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-8">
-            <div className="flex-grow">
-              <ProjectFilters
-                projects={projects as Project[]}
-                onFiltersChange={setFilteredProjects}
-              />
-            </div>
-            <div className="self-end sm:self-auto mt-4 sm:mt-0">
-              <ViewToggle
-                currentView={viewMode}
-                onViewChange={handleViewChange}
-              />
-            </div>
-          </div>
+          <div className="flex flex-col lg:flex-row gap-6">
+            <Sidebar
+              projects={projects as Project[]}
+              onFiltersChange={setFilteredProjects}
+              className="mb-6 lg:mb-0"
+            />
 
-          <div className="mt-6">
-            {viewMode === "grid" ? (
-              <ProjectGrid projects={filteredProjects} />
-            ) : (
-              <ProjectList projects={filteredProjects} />
-            )}
+            <div className="flex-1">
+              <div className="flex justify-end mb-4">
+                <ViewToggle
+                  currentView={viewMode}
+                  onViewChange={handleViewChange}
+                />
+              </div>
+
+              <div>
+                {viewMode === "grid" ? (
+                  <ProjectGrid projects={filteredProjects} />
+                ) : (
+                  <ProjectList projects={filteredProjects} />
+                )}
+              </div>
+            </div>
           </div>
         </main>
 
