@@ -1,15 +1,19 @@
 "use client";
 
 import { ProjectGrid } from "@/components/ProjectGrid";
+import { ProjectFilters } from "@/components/ProjectFilters";
 import projects from "@/data/projects.json";
 import { Project } from "@/types";
 import { useRouter, useSearchParams } from "next/navigation";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 
 export default function Home() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const projectId = searchParams.get("projectId");
+  const [filteredProjects, setFilteredProjects] = useState<Project[]>(
+    projects as Project[]
+  );
 
   useEffect(() => {
     if (projectId) {
@@ -34,7 +38,11 @@ export default function Home() {
         </header>
 
         <main>
-          <ProjectGrid projects={projects as Project[]} />
+          <ProjectFilters
+            projects={projects as Project[]}
+            onFiltersChange={setFilteredProjects}
+          />
+          <ProjectGrid projects={filteredProjects} />
         </main>
 
         <footer className="mt-20 pt-8 border-t text-center text-sm text-muted-foreground">
