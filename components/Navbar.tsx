@@ -9,15 +9,12 @@ export function Navbar() {
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         <div className="flex items-center gap-2">
           <Link href="/" className="text-xl font-bold">
-            Hackathon Archive
+            Hackathon History
           </Link>
         </div>
         <div className="flex items-center gap-4">
           <Button variant="ghost" asChild>
             <Link href="/">Home</Link>
-          </Button>
-          <Button variant="ghost" asChild>
-            <Link href="/#about">About</Link>
           </Button>
         </div>
       </div>
