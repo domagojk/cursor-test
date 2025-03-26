@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import { Project } from "@/types";
 import {
   Card,
@@ -17,8 +18,17 @@ interface ProjectCardProps {
 }
 
 export function ProjectCard({ project }: ProjectCardProps) {
+  const router = useRouter();
+
+  const handleCardClick = () => {
+    router.push(`/project/${project.id}`);
+  };
+
   return (
-    <Card className="overflow-hidden transition-all hover:shadow-lg">
+    <Card
+      className="overflow-hidden transition-all hover:shadow-lg h-full cursor-pointer"
+      onClick={handleCardClick}
+    >
       <div className="relative h-48 w-full">
         <Image
           src={project.image}
@@ -51,7 +61,10 @@ export function ProjectCard({ project }: ProjectCardProps) {
       </CardContent>
       <CardFooter className="flex flex-col items-start gap-2">
         <h4 className="text-sm font-medium">Links:</h4>
-        <div className="flex flex-wrap gap-2">
+        <div
+          className="flex flex-wrap gap-2"
+          onClick={(e) => e.stopPropagation()}
+        >
           {project.links.map((link, index) => (
             <Button key={index} variant="outline" size="sm" asChild>
               <a href={link.url} target="_blank" rel="noopener noreferrer">
