@@ -3,7 +3,7 @@
     "id": 1,
     "title": "AI Code Assistant",
     "description": "An AI-powered code assistant that helps developers write better code faster. Integrates with popular IDEs and provides real-time suggestions.",
-    "image": "/images/ai-code-assistant.jpg",
+    "image": "https://picsum.photos/seed/aicode/800/400",
     "links": [
       {
         "title": "GitHub Repository",
@@ -22,7 +22,7 @@
     "id": 2,
     "title": "Employee Wellness Dashboard",
     "description": "A dashboard that tracks and promotes employee wellness initiatives. Features include activity tracking, wellness challenges, and team competitions.",
-    "image": "/images/wellness-dashboard.jpg",
+    "image": "https://picsum.photos/id/26/800/400?grayscale",
     "links": [
       {
         "title": "Internal Wiki",
@@ -37,7 +37,7 @@
     "id": 3,
     "title": "Customer Feedback Portal",
     "description": "A centralized portal for collecting and analyzing customer feedback from various channels. Includes sentiment analysis and trend visualization.",
-    "image": "/images/feedback-portal.jpg",
+    "image": "https://picsum.photos/id/183/800/400?blur=2",
     "links": [
       {
         "title": "Product Page",
@@ -51,5 +51,39 @@
     "team": ["Emma Davis", "Ryan Thompson", "Olivia Martinez"],
     "hackathon": "Spring Hackathon 2024",
     "date": "March 2024"
+  },
+  {
+    "id": 4,
+    "title": "Mobile Meeting Assistant",
+    "description": "An AI-powered meeting assistant that takes notes, summarizes discussions, and assigns action items automatically.",
+    "image": "https://picsum.photos/id/96/800/400",
+    "links": [
+      {
+        "title": "App Store",
+        "url": "https://apps.apple.com/app/meeting-assistant"
+      },
+      {
+        "title": "Play Store",
+        "url": "https://play.google.com/store/apps/meeting-assistant"
+      }
+    ],
+    "team": ["Chris Lee", "Taylor Roberts", "Sam Garcia"],
+    "hackathon": "Fall Hackathon 2023",
+    "date": "October 2023"
+  },
+  {
+    "id": 5,
+    "title": "Supply Chain Optimizer",
+    "description": "An ML-based tool that optimizes supply chain operations by predicting demand and suggesting inventory adjustments.",
+    "image": "https://picsum.photos/seed/supply/800/400?grayscale&blur=1",
+    "links": [
+      {
+        "title": "Documentation",
+        "url": "https://docs.company.com/supply-chain-optimizer"
+      }
+    ],
+    "team": ["Jennifer Kim", "Rajiv Patel", "Maria Rodriguez"],
+    "hackathon": "Winter Hackathon 2022",
+    "date": "December 2022"
   }
 ]
